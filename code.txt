@@ -1,0 +1,228 @@
+index.html
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Interactive Landing Page</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
+</head>
+<body>
+    <nav id="navbar">
+        <ul>
+            <li><a href="#home">Home</a></li>
+            <li><a href="#about">About</a></li>
+            <li><a href="#services">Services</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
+    </nav>
+
+    <header id="home">
+        <div class="hero-content animate__animated animate__fadeIn">
+            <h1>Welcome to Our Website</h1>
+            <p>Discover our amazing services and features</p>
+            <a href="#services" class="cta-button">Learn More</a>
+        </div>
+    </header>
+
+    <section id="about">
+        <div class="content animate__animated animate__fadeInUp">
+            <h2>About Us</h2>
+            <p>We are a company dedicated to providing the best services to our customers.</p>
+            <img src="about.jpg" alt="About Us">
+        </div>
+    </section>
+
+    <section id="services">
+        <div class="content">
+            <h2>Our Services</h2>
+            <div class="service animate__animated animate__zoomIn">
+                <img src="service1.jpg" alt="Service 1">
+                <h3>Service 1</h3>
+                <p>Description of service 1.</p>
+            </div>
+            <div class="service animate__animated animate__zoomIn">
+                <img src="service2.jpg" alt="Service 2">
+                <h3>Service 2</h3>
+                <p>Description of service 2.</p>
+            </div>
+            <div class="service animate__animated animate__zoomIn">
+                <img src="service3.jpg" alt="Service 3">
+                <h3>Service 3</h3>
+                <p>Description of service 3.</p>
+            </div>
+        </div>
+    </section>
+
+    <section id="contact">
+        <div class="content animate__animated animate__fadeInUp">
+            <h2>Contact Us</h2>
+            <p>Feel free to reach out to us for any inquiries.</p>
+            <form action="#">
+                <input type="text" placeholder="Your Name" required>
+                <input type="email" placeholder="Your Email" required>
+                <textarea placeholder="Your Message" required></textarea>
+                <button type="submit">Send Message</button>
+            </form>
+        </div>
+    </section>
+
+    <script src="script.js"></script>
+</body>
+</html>
+
+
+styles.css
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    scroll-behavior: smooth;
+}
+
+nav {
+    position: fixed;
+    width: 100%;
+    background-color: #333;
+    color: white;
+    top: 0;
+    left: 0;
+    z-index: 1000;
+    transition: background-color 0.3s;
+}
+
+nav ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: space-around;
+}
+
+nav ul li {
+    margin: 0;
+    padding: 0;
+}
+
+nav ul li a {
+    display: block;
+    padding: 14px 20px;
+    text-decoration: none;
+    color: white;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+nav ul li a:hover {
+    background-color: #575757;
+    color: #ff7f50;
+}
+
+header {
+    background: url('header.jpg') no-repeat center center/cover;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    text-align: center;
+}
+
+.hero-content h1 {
+    font-size: 3em;
+    margin: 0;
+}
+
+.hero-content p {
+    font-size: 1.5em;
+    margin: 10px 0 20px;
+}
+
+.cta-button {
+    padding: 10px 20px;
+    background-color: #ff7f50;
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background-color 0.3s, transform 0.3s;
+}
+
+.cta-button:hover {
+    background-color: #ff6347;
+    transform: scale(1.1);
+}
+
+section {
+    padding: 60px 20px;
+    text-align: center;
+}
+
+section h2 {
+    font-size: 2.5em;
+    margin-bottom: 20px;
+}
+
+section p {
+    font-size: 1.2em;
+    margin-bottom: 40px;
+}
+
+.content {
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+.service {
+    display: inline-block;
+    width: 30%;
+    margin: 0 10px;
+    text-align: left;
+    transition: transform 0.3s;
+}
+
+.service img {
+    width: 100%;
+    height: auto;
+    border-radius: 5px;
+}
+
+.service:hover {
+    transform: translateY(-10px);
+}
+
+form input, form textarea {
+    width: 100%;
+    padding: 10px;
+    margin: 10px 0;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+form button {
+    padding: 10px 20px;
+    background-color: #333;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.3s;
+}
+
+form button:hover {
+    background-color: #575757;
+    transform: scale(1.05);
+}
+
+script.js
+document.addEventListener('DOMContentLoaded', function() {
+    const navbar = document.getElementById('navbar');
+
+    window.addEventListener('scroll', function() {
+        if (window.scrollY > 50) {
+            navbar.classList.add('scrolled');
+        } else {
+            navbar.classList.remove('scrolled');
+        }
+    });
+});
+

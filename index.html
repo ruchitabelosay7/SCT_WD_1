@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Interactive Landing Page</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
+</head>
+<body>
+    <nav id="navbar">
+        <ul>
+            <li><a href="#home">Home</a></li>
+            <li><a href="#about">About</a></li>
+            <li><a href="#services">Services</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
+    </nav>
+
+    <header id="home">
+        <div class="hero-content animate__animated animate__fadeIn">
+            <h1>Welcome to Our Website</h1>
+            <p>Discover our amazing services and features</p>
+            <a href="#services" class="cta-button">Learn More</a>
+        </div>
+    </header>
+
+    <section id="about">
+        <div class="content animate__animated animate__fadeInUp">
+            <h2>About Us</h2>
+            <p>We are a company dedicated to providing the best services to our customers.</p>
+            <img src="about.jpg" alt="About Us">
+        </div>
+    </section>
+
+    <section id="services">
+        <div class="content">
+            <h2>Our Services</h2>
+            <div class="service animate__animated animate__zoomIn">
+                <img src="service1.jpg" alt="Service 1">
+                <h3>Service 1</h3>
+                <p>Description of service 1.</p>
+            </div>
+            <div class="service animate__animated animate__zoomIn">
+                <img src="service2.jpg" alt="Service 2">
+                <h3>Service 2</h3>
+                <p>Description of service 2.</p>
+            </div>
+            <div class="service animate__animated animate__zoomIn">
+                <img src="service3.jpg" alt="Service 3">
+                <h3>Service 3</h3>
+                <p>Description of service 3.</p>
+            </div>
+        </div>
+    </section>
+
+    <section id="contact">
+        <div class="content animate__animated animate__fadeInUp">
+            <h2>Contact Us</h2>
+            <p>Feel free to reach out to us for any inquiries.</p>
+            <form action="#">
+                <input type="text" placeholder="Your Name" required>
+                <input type="email" placeholder="Your Email" required>
+                <textarea placeholder="Your Message" required></textarea>
+                <button type="submit">Send Message</button>
+            </form>
+        </div>
+    </section>
+
+    <script src="script.js"></script>
+</body>
+</html>
